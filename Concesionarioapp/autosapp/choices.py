@@ -5,6 +5,7 @@ from django.db import models
 generos=(
     ('F','Femenino'),
     ('M','Masculino'),
+    ('X','Indefinido'),
     ('-','--')
 )
 
