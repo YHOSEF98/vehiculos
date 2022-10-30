@@ -1,4 +1,5 @@
 from codecs import charmap_build
+from distutils.command.upload import upload
 from email.policy import default
 from ensurepip import version
 from pyexpat import model
@@ -111,6 +112,7 @@ class Vehiculo(models.Model):
     categoria = models.CharField(max_length=1, choices=categoriaVehiculos, default="-")
     tipoV = models.CharField(max_length=50, verbose_name="Tipo de vehiculo")
     precioCompra = models.IntegerField(verbose_name="Precio de compra")
+    img = models.ImageField(upload_to="autosapp",null=True,blank=True)
 
     def nom_vehiculo(self):
         return "{}, {}, {}, {}".format(

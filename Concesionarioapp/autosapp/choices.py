@@ -1,6 +1,10 @@
+from dataclasses import field, fields
 from email.policy import default
 from tabnanny import verbose
 from django.db import models
+
+#from django import forms
+
 
 generos=(
     ('F','Femenino'),
@@ -33,3 +37,40 @@ class Persona(models.Model):
     tfno = models.IntegerField(verbose_name="Telefono")
     correo = models.EmailField()
     direccion = models.CharField(max_length=150)
+
+
+""" class vehiculosForm(forms.ModelForm):
+
+    class Meta:
+        models = Vehiculo
+
+        fields = [
+            "idConsecionario",
+            "modelo",
+            "marca",
+            "year",
+            "estado",
+            "categoria",
+            "tipoV",
+            "precioCompra",
+        ]
+        labels = {
+            "idConsecionario": "Consecionario",
+            "modelo": "Modelo",
+            "marca": "Marca",
+            "year": "Año",
+            "estado": "Estado",
+            "categoria": "Categoria",
+            "tipoV": "Tipo de vehiculo",
+            "precioCompra": "Precio de compra",
+        }
+        widgets = {
+            "idConsecionario": forms.CheckboxSelectMultiple(),
+            "modelo": forms.TextInput(attrs={'class':'form-control'}),
+            "marca": forms.TextInput(attrs={'class':'form-control'}),
+            "year": forms.TextInput(attrs={'class':'form-control'}),
+            "estado": forms.CheckboxSelectMultiple(),
+            "categoria": forms.CheckboxSelectMultiple(),
+            "tipoV": forms.TextInput(attrs={'class':'form-control'}),
+            "precioCompra": forms.TextInput(attrs={'class':'form-control'})
+        }"""
