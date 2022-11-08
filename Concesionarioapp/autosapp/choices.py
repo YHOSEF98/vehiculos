@@ -15,18 +15,18 @@ generos=(
 
 
 categoriaVehiculos=(
-    ('p','Pesado'),
-    ('M','Ligero'),
-    ('E','Especiales'),
-    ('A','Agricolas'),
+    ('Pesado','Pesado'),
+    ('Lijero','Ligero'),
+    ('Especial','Especiales'),
+    ('Agricola','Agricolas'),
     ('-','--')
 )
 
 
 estadoVehiculos=(
-    ('N','Nuevo'),
-    ('U','Usado'),
-    ('-','--')
+    ('Nuevo','Nuevo'),
+    ('Usado','Usado'),
+    ('--','--')
 )
 
 class Persona(models.Model):

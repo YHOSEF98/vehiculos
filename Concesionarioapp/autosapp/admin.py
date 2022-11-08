@@ -17,6 +17,7 @@ class EmpleadoAdmin(admin.ModelAdmin):
     list_display=("nombres", "apellidos", "idConcesionario", "paisOrigen")
     search_fields=("nombres", "apellidos", "idConcesionario", "paisOrigen")
 
+#@admin.register(Vehiculo)
 class VehiculoAdmin(admin.ModelAdmin):
     list_display=("modelo", "marca", "year", "estado", "precioCompra")
     search_fields=("modelo", "marca", "year", "estado", "precioCompra")
